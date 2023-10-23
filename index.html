@@ -28,14 +28,14 @@
         <div class="container">
             <div class="row">
                 <div class="col d-flex justify-content-center mt-4">
-                    <h1>API de Rick and Morty</h1>
+                    <h1 class="fw-bold text-info">API de Rick and Morty</h1>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col d-flex justify-content-center mt-2">
-                    <input id="searchCharacters" class="form-control w-75 position-relative" type="text" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <input id="searchCharacters" class="form-control w-75 position-relative" type="text" placeholder="Search..." aria-label="Pesquisar">
                     <i class="bi bi-search position-absolute p-2"></i>
                 </div>
             </div>
@@ -77,7 +77,31 @@
     </main>
 
     <footer>
-        
+        <div class="container" id="foot">
+            <div class="row">
+                <div class="col-12 col-sm-4 infos-footer d-flex justify-content-center">
+                    <span class="text-white text-center">CHARACTERS: <br>
+                        <span id="total-characters"></span></span>
+                </div>
+                <div class="col-12 col-sm-4 infos-footer d-flex justify-content-center">
+                    <span class="text-white text-center">LOCATIONS: <br>
+                        <span id="total-locations"></span></span>
+                </div>
+                <div class="col-12 col-sm-4 infos-footer d-flex justify-content-center">
+                    <span class="text-white text-center">EPISODES: <br>
+                        <span id="total-episodes"></span></span>
+                </div>
+                 
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col dev-footer">
+                        <p class="text-white text-center">Desenvolvido por: <a class="text-decoration-none text-white fw-bold" href="" target="_blank" rel="noopener noreferrer">Matheus Prates da Luz</a> em 2023.</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
     </footer>
 
     <script

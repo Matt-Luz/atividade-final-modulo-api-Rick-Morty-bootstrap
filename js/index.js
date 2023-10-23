@@ -1,9 +1,13 @@
 const charactersList = document.querySelector(".row-characters-list");
-const searchCharacters = document.getElementById('searchCharacters')
+const searchCharacters = document.getElementById('searchCharacters');
 
-const pagination = document.getElementById('pagination')
-const btnPrevious = document.getElementById('previous')
+const pagination = document.getElementById('pagination');
+const btnPrevious = document.getElementById('previous');
 const btnNext = document.getElementById('next');
+
+const totalCharactersInfo = document.getElementById('total-characters');
+const totalLocationsInfo = document.getElementById('total-locations');
+const totalEpisodesInfo = document.getElementById('total-episodes');
 
 let currentPage = 1;
 let info;
@@ -73,12 +77,12 @@ function showCharacters(characters) {
                         </div>
                         <div class="modal-body">
 
-                            <div class="card mb-3" style="min-width: 540px;">
+                            <div class="card mb-3">
                                 <div class="row g-0">
-                                    <div class="col-md-4">
+                                    <div class="col-12 col-md-4">
                                         <img src="${character.image}" class="img-fluid rounded-start" alt="...">
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-12 col-md-8">
                                         <div class="card-body">
                                             <h2 class="card-title text-center">${character.name}</h2>
                                             <p class="card-text text-center"><span class="${statusClass}">Status:</span> ${character.status} <br> Specie: ${character.species}</p>
@@ -127,3 +131,29 @@ btnPrevious.addEventListener("click", () => {
   });
 
 charactersSearch();
+
+async function infoFooter() {
+    try {
+        const responseCharacter = await api.get("/character");
+        const totalCharacters = responseCharacter.data.info.count;
+
+        const responseLocation = await api.get("/location");
+        const totalLocations = responseLocation.data.info.count;
+
+        const responseEpisode = await api.get("/episode");
+        const totalEpisodes = responseEpisode.data.info.count;
+
+        setFooterInfo(totalCharacters, totalLocations, totalEpisodes)
+        
+    } catch (error) {
+        console.log("Não localizadas as informações", error);
+    };
+};
+
+function setFooterInfo(totalCharacters, totalLocations, totalEpisodes) {
+    totalCharactersInfo.innerHTML = totalCharacters;
+    totalLocationsInfo.innerHTML = totalLocations;
+    totalEpisodesInfo.innerHTML = totalEpisodes;
+};
+
+infoFooter()

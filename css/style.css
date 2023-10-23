@@ -1,5 +1,14 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+body {
+  font-family: roboto;
+}
+
 #logo-nav {
     height: 50px;
     width: 50px;
@@ -14,7 +23,7 @@ main {
 
 #card-container {
     overflow-y: scroll;
-    height: 480px;
+    height: 450px;
 }
 
 .button-page {
@@ -33,9 +42,26 @@ main {
     background-color: #212529 !important;
 }
 
+.text-info {
+  color: #212529 !important;
+}
+
+
 footer {
     background-color: #151916;
-    height: 30vh;
+    height: 100%;
+}
+
+#foot{
+  padding-top: 30px;
+}
+
+.infos-footer {
+  margin-top: 10px;
+}
+
+.dev-footer {
+  margin-top: 50px;
 }
 
 /* Status */
