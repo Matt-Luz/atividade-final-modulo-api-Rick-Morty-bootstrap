@@ -19,6 +19,9 @@ async function charactersSearch(page = 1, name = "") {
             params
         });
 
+        btnPrevious.disabled = true
+        btnNext.disabled = true
+
         const characters = response.data.results;
         info = response.data.info;
 
@@ -61,8 +64,30 @@ function showCharacters(characters) {
             </div>
         `
         charactersList.appendChild(card);
+
+        btnPrevious.disabled = info.prev ? false : true
+        btnNext.disabled = info.next ? false : true
         
     });
-}
+};
+
+btnPrevious.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      charactersSearch(currentPage, searchCharacters.value);
+    }
+  });
+  
+  btnNext.addEventListener("click", () => {
+    if (currentPage < info.pages) {
+      currentPage++;
+      charactersSearch(currentPage, searchCharacters.value);
+    }
+  });
+
+  searchCharacters.addEventListener("input", () => {
+    currentPage = 1;
+    charactersSearch(currentPage, searchCharacters.value);
+  });
 
 charactersSearch();
