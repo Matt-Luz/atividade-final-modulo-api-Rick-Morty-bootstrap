@@ -21,6 +21,20 @@ main {
     border-top: solid 3px yellow;
 }
 
+.title {
+  position: relative;
+  animation: moveTitle 10s ease-in infinite;
+}
+
+@keyframes moveTitle {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
 #card-container {
     overflow-y: scroll;
     height: 450px;
