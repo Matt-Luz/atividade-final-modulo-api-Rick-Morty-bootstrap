@@ -58,8 +58,8 @@ function showCharacters(characters) {
         };
 
         card.innerHTML = `
-            <div class="card border border-warning border-2 text-white bg-info">
-                <img src="${character.image}" class="card-img-top" data-bs-toggle="modal" data-bs-target="#exampleModal-${index}" data-character="${JSON.stringify(characters)}">
+            <div class="card border border-warning border-2 text-white bg-info" data-bs-toggle="modal" data-bs-target="#exampleModal-${index}" data-character="${JSON.stringify(characters)}">
+                <img src="${character.image}" class="card-img-top">
                 <div class="card-body">
                     <h3 class="card-title text-center fw-bold">${character.name}</h3>
                     <p class="card-text text-center mt-4"><span class="${statusClass}">Status:</span> ${character.status} - ${character.species}</p>
@@ -70,14 +70,14 @@ function showCharacters(characters) {
 
             <div class="modal fade" id="exampleModal-${index}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
+                    <div class="modal-content bg-info text-white">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Description Characters:</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close btn btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
 
-                            <div class="card mb-3">
+                            <div class="card mb-3 bg-info text-white">
                                 <div class="row g-0">
                                     <div class="col-12 col-md-4">
                                         <img src="${character.image}" class="img-fluid rounded-start" alt="...">
