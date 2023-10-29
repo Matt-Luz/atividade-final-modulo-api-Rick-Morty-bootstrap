@@ -74,6 +74,42 @@ main {
   color: #212529 !important;
 }
 
+.img-anima {
+  height: 300px;
+  width: 300px;
+}
+
+#img1 {
+  animation: imgAnima infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 7s;
+}
+
+#img2 {
+  animation: imgAnima infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+}
+
+@keyframes imgAnima {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 footer {
   background-color: #151916;
