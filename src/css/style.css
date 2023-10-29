@@ -74,12 +74,9 @@ main {
   color: #212529 !important;
 }
 
-.img-anima {
-  height: 300px;
-  width: 300px;
-}
-
 #img1 {
+  height: 200px;
+  width: 200px;
   animation: imgAnima infinite;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -87,6 +84,8 @@ main {
 }
 
 #img2 {
+  height: 200px;
+  width: 200px;
   animation: imgAnima infinite;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -158,4 +157,30 @@ footer {
   background: #2948e4;
   border-radius: 50%;
   display: inline-block;
+}
+
+/* Media Querys: */
+
+@media only screen and (max-width: 420px) {
+  #img1 {
+    height: 100px;
+    width: 100px;
+  }
+
+  #img2 {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 230px) {
+  #img1 {
+    height: 50px;
+    width: 50px;
+  }
+
+  #img2 {
+    height: 50px;
+    width: 50px;
+  }
 }
