@@ -66,6 +66,6 @@ Criada uma aplicação web para listagem dos personagens da série Rick and Mort
 
 ### O layout das páginas foi gerado atráves de protótipos.
 
-### Link para o deploy <a href="">AQUI</a>
+### Link para o deploy <a href="https://atividade-final-modulo-api-rick-morty-bootstrap-r6mgkzwrw.vercel.app">AQUI</a>
 
 ![Rick and Morty saindo do portal](./assets/img/rick-and-morty-31043.png)
